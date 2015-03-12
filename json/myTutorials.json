@@ -1,0 +1,27 @@
+[
+{
+  "questions": "1. question 1",
+  "answers" :["ans1","ans2","ans3","ans4"],
+  "correct" :"A"
+},
+{
+  "questions": "2. question 1",
+  "answers" :["ans11","ans2","ans3","ans4"],
+  "correct" :"C"
+},
+{
+  "questions": "3. question 1",
+  "answers" :["ans12","ans2","ans3","ans4"],
+  "correct" :"D"
+},
+{
+  "questions": "4. question 1",
+  "answers" :["ans13","ans2","ans3","ans4"],
+  "correct" :"B"
+},
+{
+  "questions": "5. question 1",
+  "answers" :["ans14","ans2","ans3","ans4"],
+  "correct" :"A"
+}
+]

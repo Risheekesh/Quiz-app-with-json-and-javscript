@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript quiz app</title>
+	<!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"> -->
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+	<div class="panel">
+		<div class="header">
+		<h1>Java Script Quiz</h1>	
+		</div>
+		<div class="container">
+				<div class="index" id="index"></div>
+				<ul>
+					<li>
+						
+					1.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Michigan?<br />
+					        <p><input type="radio" name="question0" value="A" />&nbsp;Lansing<br />
+					            <input type="radio" name="question0" value="B" />&nbsp;Richmond<br />
+					            <input type="radio" name="question0" value="C" />&nbsp;Austin<br />
+					            <input type="radio" name="question0" value="D" />&nbsp;Columbus<br />
+				            </p>
+				    </li>
+				    <li class="questions">2.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question1" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question1" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question1" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question1" value="D" />&nbsp;Reno<br />
+				        </p>
+				    </li>
+				    <li class="questions">3.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question2" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question2" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question2" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question2" value="D" />&nbsp;Reno<br />
+				        </p>
+				    </li>
+				    <li class="questions">4.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question3" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question3" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question3" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question3" value="D" />&nbsp;Reno<br />
+				        </p>
+				    </li>
+				    <li class="questions">5.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question4" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question4" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question4" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question4" value="D" />&nbsp;Reno<br />
+				        </p>
+				    </li>
+				    <li class="questions">6.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question5" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question5" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question5" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question5" value="D" />&nbsp;Reno<br />
+				         </p>
+				    </li>
+				    <li class="questions">7.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question6" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question6" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question6" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question6" value="D" />&nbsp;Reno<br />
+				         </p>
+				    </li>
+				    <li class="questions">8.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question7" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question7" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question7" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question7" value="D" />&nbsp;Reno<br />
+				         </p>
+				    </li>
+				    <li class="questions">9.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question8" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question8" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question8" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question8" value="D" />&nbsp;Reno<br />
+				         </p>
+				    </li>
+				    <li class="questions">10.&nbsp; &nbsp;&nbsp;&nbsp;What is the capitol of Virginia?<br />
+					     <p><input type="radio" name="question9" value="A" />&nbsp;Lansing<br />
+					        <input type="radio" name="question9" value="B" />&nbsp;Richmond<br />
+					        <input type="radio" name="question9" value="C" />&nbsp;Lincoln<br />
+					        <input type="radio" name="question9" value="D" />&nbsp;Reno<br />
+				         </p>
+				    </li>
+			    </ul>
+			    <div class="result-page"><h2>Result page</h2><p id="score"></p></div>			    	
+		</div>
+		<div class="footer" id="footer">
+			<div class="prev-section">
+				<input type="button" name="prev-button" id="prev" value=" " class="prev-button" onclick="previousbutton()" />
+			</div>
+			<div class="next-section">
+				<input type="button" name="next-button" id="next" value=" " class="next-button" onclick="nextbutton()">
+			</div>
+		</div>
+	</div>
+
+<script>
+	var i=0;
+	var k=document.getElementsByTagName('li');
+	var result=new Array();
+	var ans=["A","C","D","B","A","C","A","D","B","C"];
+	var score=0;
+	var progress=document.getElementById('index')
+	progress.innerHTML=i+1 +"/"+ans.length;
+	function previousbutton()
+	{
+		if(i==0)
+		{
+			document.getElementById('prev').disabled=true;
+
+		}
+		else{
+				if(!document.querySelector('input[name="question'+ i + '"]:checked') ){
+					result[i]=0;
+					k[i].style.display="none";
+					k[i-1].style.display="block";
+					i--;
+					 document.getElementById('index').innerHTML=i+1 +"/"+ans.length;
+				}
+				else{
+					result[i]=document.querySelector('input[name="question'+ i + '"]:checked').value;
+					k[i].style.display="none";
+					k[i-1].style.display="block";
+					i--;
+					 document.getElementById('index').innerHTML=i+1 +"/"+ans.length;
+				}
+			}
+	}
+	function nextbutton(){
+		if(i==0)
+		{
+			document.getElementById('prev').disabled=false;
+		}
+
+		if(i==k.length-1)
+		{	
+			// window.location.reload();
+			if(!document.querySelector('input[name="question'+ i + '"]:checked') )
+			{	
+				result[i]=0;
+			}
+			else
+			{
+				result[i]=document.querySelector('input[name="question' + i + '"]:checked').value;
+			}
+			for (var l = 0; l < result.length; l++) {
+					if(result[l]==ans[l])
+					{	
+						score++;
+					}
+				}
+				if(confirm("Are You Sure You Want to Submit The Test?")==true)
+				{
+				var container=document.getElementsByTagName('ul');
+				container[0].style.display='none';
+				var result_page=document.getElementsByClassName('result-page');
+				result_page[0].style.display='block';
+				document.getElementById('score').innerHTML="Congratulation! Your score is : " +score+"out of "+ ans.length;
+				document.getElementById('footer').style.display="none";
+				document.getElementById('index').style.display="none";
+			}else{}
+		}
+		else
+		{		if(i==k.length-2){
+								document.getElementById('next').style.backgroundImage="url('result.png')"
+					}
+				if(!document.querySelector('input[name="question'+ i + '"]:checked') ){
+					result[i]=0;
+					k[i].style.display="none";
+					k[i+1].style.display="block";
+					i++;
+					progress.innerHTML=i+1 +"/"+ans.length;
+				}
+				else{
+					result[i]=document.querySelector('input[name="question'+ i + '"]:checked').value;
+					k[i].style.display="none";
+					k[i+1].style.display="block";
+					i++;
+					progress.innerHTML=i+1 +"/"+ans.length;
+				}
+
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript quiz app</title>
+	<!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"> -->
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<div class="panel">
+		<div class="header">
+		<h1>Java Script Quiz</h1>	
+		</div>
+		<div class="container">
+				<div class="index" id="index"></div>
+				<ul>
+					<li > 
+						<div id="question" class="question"></div>
+						<input type="radio" name="question" value="A" id="A" /><label for="A" class="ans"></label><br>
+						<input type="radio" name="question" value="B" id="B" /><label for="B" class="ans"></label><br>
+						<input type="radio" name="question" value="C" id="C" /><label for="C" class="ans"></label><br>
+						<input type="radio" name="question" value="D" id="D" /><label for="D" class="ans"></label><br>
+				    </li>
+				    <div class="alert" id="alert">Please select an option</div>
+			    </ul>
+			    <div class="result-page"><h2>Result page</h2><p id="score"></p></div>			    	
+		</div>
+		<div class="footer" id="footer">
+			<div class="prev-section">
+				<input type="button" name="prev-button" id="prev" value=" " class="prev-button" onclick="previousbutton(quizData)" />
+			</div>
+			<div class="next-section">
+				<input type="button" name="next-button" id="next" value=" " class="next-button" onclick="nextbutton(quizData);">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
